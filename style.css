@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+}
+
+.main-body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-body .nav {
+  background-color: #31255a;
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.main-body .nav .logo {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+}
+
+.main-body .nav .logo img#weatherwise_icon {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+}
+
+.main-body .nav .logo img#weatherwise_icon:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 7px black;
+}
+
+.main-body .nav .text {
+  padding-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-body .nav .text h3 {
+  font-family: cursive;
+  text-shadow: 2px 2px 10px black;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.main-body .nav .search {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+  width: 50%;
+  align-self: flex-end;
+  margin-right: 2.22rem;
+}
+
+.main-body .nav .search .bar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+}
+
+.main-body .nav .search .bar input {
+  box-shadow: 1px 1px 7px black;
+  margin-right: 0.6rem;
+  height: 2.7rem;
+  width: 60%;
+  border: 1px solid gray;
+  color: black;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border-radius: 1.2rem;
+}
+
+.main-body .nav .search .browse {
+  box-shadow: 1px 1px 7px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.7rem;
+  width: 2.7rem;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.main-body .nav .search .browse:hover {
+  background-color: rgb(246, 243, 243);
+  transform: scale(1.05);
+}
+
+.main-body .nav .search .browse i {
+  color: black;
+  font-size: 1.2rem;
+  padding-top: 0.1rem;
+  padding-left: 0.1rem;
+}
+
+.main-body .main {
+  height: 90%;
+  width: 100%;
+  background-color: #75b4e3;
+  flex-grow: 1;
+  padding: 1rem 1rem 1rem 1rem;
+  overflow-y: scroll;
+  /* display: none; */
+}
+
+::-webkit-scrollbar {
+  width: 0.85rem;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.main-body .main:hover::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
+.main-body .main .current-day-weather {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.main-body .main .current-day-weather .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-body .main .current-day-weather .location {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body .main .current-day-weather .location h2 {
+  background-color: white;
+  border-radius: 0.8rem;
+  color: black;
+}
+
+.main-body .main .current-day-weather .location h2 span {
+  color: black;
+}
+
+.main-body .main .current-day-weather .current-weather {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.main h3,
+.hour-weather h3 {
+  background-color: white;
+  border-radius: 0.8rem;
+  color: black;
+}
+
+.main-body .main .current-day-weather .box1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-body .main .current-day-weather .box1 .condition {
+  background-color: #ffffff;
+  border-radius: 100%;
+  margin-left: 2rem;
+  margin-right: 5rem;
+  height: 7.5rem;
+  width: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body .main .current-day-weather .box1 .condition img {
+  height: 7.5rem;
+  width: 7.5rem;
+}
+
+.main-body .main .current-day-weather .day-weather {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.main-body .main .current-day-weather .astro-status {
+  width: 100%;
+}
+
+.main-body .main .current-day-weather .astro-status .sun {
+  margin-left: 2rem;
+}
+
+.main-body .main .current-day-weather .astro-status .moon {
+  margin-left: 2rem;
+}
+
+.main-body .hour-weather {
+  height: 89%;
+  width: 100%;
+  background-color: #75b4e3;
+  display: none;
+  overflow-y: scroll;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.main-body .hour-weather .return {
+  background-color: white;
+  border-radius: 100%;
+  height: 2.7rem;
+  width: 2.7rem;
+  box-shadow: 1px 1px 7px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-body .hour-weather .return:hover {
+  background-color: rgb(246, 243, 243);
+  transform: scale(1.05);
+}
+
+.main-body .hour-weather .return i {
+  color: black;
+  font-size: 1.3rem;
+}
+
+.main-body .hour-weather .hr24Weather {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.main-body .hour-weather .hr24Weather .hourly-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #54416d;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid black;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-body .hour-weather .hr24Weather .hourly-weather:hover {
+  background-color: #654c87;
+}
+
+.main-body .hour-weather .hr24Weather .hourly-weather .conditon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-body .hour-weather .hr24Weather .hourly-weather .conditon .image {
+  background-color: white;
+  border-radius: 100%;
+  padding: 0.2rem;
+  margin-bottom: 0.6rem;
+  border: 1px solid black;
+}
+
+.main-body .hour-weather .hr24Weather .hourly-weather .wind-speed {
+  margin-bottom: 0;
+}
+
+.main-body .main .getInfo {
+  height: 3.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-body .main .getInfo button {
+  height: 2.5rem;
+  width: 19.5rem;
+  color: black;
+  font-weight: 550;
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 7px black;
+}
+
+.main-body .main .getInfo button:hover {
+  background-color: rgb(246, 243, 243);
+  transform: scale(1.05);
+}
